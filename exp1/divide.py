@@ -1,20 +1,13 @@
-'''
-Author: seltsam020 73098253+seltsam020@users.noreply.github.com
-Date: 2022-05-13 14:54:26
-LastEditors: seltsam020 73098253+seltsam020@users.noreply.github.com
-LastEditTime: 2022-05-13 15:11:30
-FilePath: \neu_deeplearning_coursedesign\exp1\divide.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
 import os
 import random
-trainval_percent = 0.1
-train_percent = 0.9
+trainval_percent = 0.2
+train_percent = 0.8
 xmlfilepath = './data/train_location'
 txtsavepath = './data/label'
 total_xml = os.listdir(xmlfilepath)
 num = len(total_xml)
 list = range(num)
+print(list)
 tv = int(num * trainval_percent)
 tr = int(tv * train_percent)
 trainval = random.sample(list, tv)
